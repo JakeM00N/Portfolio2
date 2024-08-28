@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jake Mondejar</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <nav><a href="">Jake Mondejar</a></nav>
+    </div>
+
+    <section class="wraper">
+      <h1>A Digital Artist</h1>
+      <div class="card" id="card-1">
+        <img src="./assets/chess.jpg" alt="" />
+      </div>
+      <div class="card" id="card-2">
+        <img src="./assets/isometric classroom.jpg" alt="" />
+      </div>
+      <div class="card" id="card-3">
+        <img src="./assets/isometric classroom1.jpg" alt="" />
+      </div>
+      <div class="card" id="card-4">
+        <img src="./assets/dinnerdate table.jpg" alt="" />
+      </div>
+    </section>
+
+    <section class="outro">
+      <h1>
+        As a passionate digital artist, I transform ideas <br />
+        into visual masterpieces that captivate and inspire.
+      </h1>
+      <a href="">
+        <button>Contact me</button>
+      </a>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script>
+      const lenis = new Lenis();
+
+      lenis.on("scroll", (e) => {
+        console.log(e);
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+    </script>
+  </body>
+</html>
